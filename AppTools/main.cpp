@@ -1,15 +1,16 @@
-#include "mainwindow.h"
-#include "myHelper.h"
+#include "ui/mainwindow.h"
+#include "helper/MyHelper.h"
 
 #include <QApplication>
 
 void set()
 {
-    QApplication::setWindowIcon(QIcon(":/ico/setting-icon-dark.png"));
+    //QApplication::setWindowIcon(QIcon(QString("%1/image/setting-icon-dark.png")\
+    //                                  .arg(qApp->applicationDirPath())));
 
     QApplication::setFont(QFont ("微软雅黑", 10, QFont::Normal, false));
 
-    myHelper::qssopen(":/qss/mac.css");
+    MyHelper::setQss(QString("%1/qss/mac.css").arg(qApp->applicationDirPath()));
 }
 
 int main(int argc, char *argv[])

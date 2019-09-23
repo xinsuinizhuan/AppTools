@@ -5,22 +5,23 @@
 #include <QtGui>
 #include <QtWidgets>
 
-class binaryCvn: public QObject
+class BinaryCvn: public QObject
 {
 public:
-    static unsigned int fl(float a)
+    static unsigned int floatToHex(float a)
     {
         union fi
         {
             float f;
-            unsigned int i;
+            unsigned int h;
         } ufi;
         ufi.f = a;
-        return ufi.i;
+        return ufi.h;
     }
 
-    static float ByteToFloat(unsigned int* a)//使用取地址的方法进行处理
+    static float hexToFloat(unsigned char* a)//使用取地址的方法进行处理
     {
+        //return *((float*)a);
         return *(reinterpret_cast<float*>(a));
     }
 
