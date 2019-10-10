@@ -2,7 +2,7 @@
 QT的一套UI模板以及一些小工具合集
 
 1. 编译构建后
-2. 把`源码 bin 目录下的所有文件`复制到编译出来的可执行文件所在目录，覆盖`bin`；
+2. 把[源码bin文件夹](AppTools/bin)复制到编译出来的可执行文件所在目录，覆盖编译生成的`bin文件夹`；
 3. 将`/bin/sql`目录下的[AppTools.sql](AppTools/bin/sql/AppTools.sql)导入MySql数据库；
 
 程序内部配置，可根据实际情况修改[LoginWidget.cpp](AppTools/ui/LoginWidget.cpp)的`on_loginbtn_clicked()`函数
